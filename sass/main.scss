@@ -1,5 +1,5 @@
 @import "compass/css3";
-@import "../../Cisco_Fonts/CiscoSans";
+@import "../Cisco_Fonts/CiscoSans";
 $officeBackground: #F9FAFA;
 $notificationBar: #EFF0F1;
 $blue: #27A5D9;
@@ -296,7 +296,7 @@ panel-container {
 		  // border: 1px solid black;
 		  border-radius: 50%;
 		  display: inline-block;
-		  background-image: url(../../Cisco-Assets/personas/Catherine-Sinu.png);
+		  background-image: url(./../img/Catherine-Sinu.png);
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: cover;

@@ -274,7 +274,7 @@ panel-container .panel {
   height: 20vmin;
   border-radius: 50%;
   display: inline-block;
-  background-image: url(../../Cisco-Assets/personas/Catherine-Sinu.png);
+  background-image: url(./../img/Catherine-Sinu.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
