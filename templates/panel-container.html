@@ -1,0 +1,73 @@
+<!-- ************************ LEFT PANEL START ********************** -->
+<div panel class="panel left">
+	<div class="presentation-container top">
+		<!-- <div class="container">
+			<div class="content sharing"></div>
+		</div> -->
+		<div class="container">
+			<div class="content sport"></div>
+		</div>
+		<div class="container">
+			<div class="content pet"></div>
+		</div>
+	</div>
+	<div class="presentation-container bottom">
+		<!-- <div class="container">
+			<div class="content revenue"></div>
+		</div> -->
+		<div class="container">
+			<div class="content paradise"></div>
+		</div>
+		<div class="container">
+			<div class="content family"></div>
+		</div>
+	</div>
+</div>
+<!-- ************************ LEFT PANEL END ********************** -->
+
+<!-- ************************ MIDDLE PANEL START ********************** -->
+<div panel class="panel middle">
+	<div class="lobby-container">
+		<div class="user-container">
+			<div class="user-img"></div>
+			
+		
+		</div>
+		<h1 class="s2">Good Morning, Catherine</h1>
+		<h5 class="s2">It's a great day to make some magic!</h5>
+		<div class="join-button" ng-click="toggleMeeting(true)">
+			Join Meeting
+		</div>
+		<div class="small-text">By entering this room, you are accepting the <span class="blue">Terms of Service</span> and <span class="blue">Privacy Statement</span>.</div>
+		<div class="more-options">
+			<i class="icon-right-arrow-contained blue"></i>More join options
+		</div>
+		
+	</div>
+	<!-- <div class="clock-container">
+		<div class="clock" clock ng-mouseover="setTime()" title="{{time}}">
+			<div class="minute hand" minute-hand></div>
+			<div class="hour hand" hour-hand></div>
+		</div>
+		<div class="text">San Francisco Time</div>
+	</div> -->
+	<div class="chats-container">
+		<a href="https://web.ciscospark.com/" target="_blank">
+			<div class="icon-container"><!--
+				--><i class="icon-chats"></i><!--
+			--></div>
+		</a>
+		<div class="text">Go to Spark</div>
+	</div>
+	<div class="small-text outer">&#169; 2015 Cisco and/or its affiliates. All rights reserved. <span class="blue">Privacy</span> | <span class="blue">Terms of Service</span></div>
+</div>
+<!-- ************************ MIDDLE PANEL END ********************** -->
+
+<!-- ************************ RIGHT PANEL START ********************** -->
+<div panel class="panel right">
+	<div class="whiteboard-container" whiteboard-size>
+		<iframe ng-class="{disable: disableIframe}" src="https://argusboard.cisco.com/"></iframe>
+		<i class="icon-fullscreen" ng-click="fullScreenToggle()" title='fullscreen'></i>
+	</div>
+</div>
+<!-- ************************ RIGHT PANEL END ********************** -->

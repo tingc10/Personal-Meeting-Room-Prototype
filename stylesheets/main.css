@@ -1,0 +1,609 @@
+@font-face {
+  font-family: 'CiscoSans';
+  src: url("./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTThin.ttf");
+  src: url("./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTThin.ttf") format("truetype"), url("./../../Cisco_Fonts/CiscoSans OTF/CiscoSansThin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CiscoSans';
+  src: url("./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTExtraLight.ttf");
+  src: url("./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTExtraLight.ttf") format("truetype"), url("./../../Cisco_Fonts/CiscoSans OTF/CiscoSansExtraLight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CiscoSans';
+  src: url("./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTRegular.ttf");
+  src: url("./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTRegular.ttf") format("truetype"), url("./../../Cisco_Fonts/CiscoSans OTF/CiscoSansRegular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CiscoSans';
+  src: url("./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTBold.ttf");
+  src: url("./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTBold.ttf") format("truetype"), url("./../../Cisco_Fonts/CiscoSans OTF/CiscoSansBold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CiscoSans';
+  src: url("./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTHeavy.ttf");
+  src: url("/./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTHeavy.ttf") format("truetype"), url("./../../Cisco_Fonts/CiscoSans OTF/CiscoSansHeavy.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CiscoSans';
+  src: url("./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTThinOblique.ttf");
+  src: url("./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTThinOblique.ttf") format("truetype"), url("./../../Cisco_Fonts/CiscoSans OTF/CiscoSansThinOblique.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'CiscoSans';
+  src: url("./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTExtraLightOblique.ttf");
+  src: url("./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTExtraLightOblique.ttf") format("truetype"), url("./../../Cisco_Fonts/CiscoSans OTF/CiscoSansExtraLightOblique.otf") format("opentype");
+  font-weight: thin;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'CiscoSans';
+  src: url("./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTRegularOblique.ttf");
+  src: url("./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTRegularOblique.ttf") format("truetype"), url("./../../Cisco_Fonts/CiscoSans OTF/CiscoSansRegularOblique.otf") format("opentype");
+  font-weight: italic;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'CiscoSans';
+  src: url("./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTBoldOblique.ttf");
+  src: url("./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTBoldOblique.ttf") format("truetype"), url("./../../Cisco_Fonts/CiscoSans OTF/CiscoSansBoldOblique.otf") format("opentype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'CiscoSans';
+  src: url("./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTHeavyOblique.ttf");
+  src: url("/./../../Cisco_Fonts/CiscoSans TTF/CiscoSansTTHeavyOblique.ttf") format("truetype"), url("./../../Cisco_Fonts/CiscoSans OTF/CiscoSansHeavyOblique.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+/* line 23, ../sass/main.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+}
+
+/* line 26, ../sass/main.scss */
+a {
+  outline: 0;
+}
+
+/* line 50, ../sass/main.scss */
+.blue {
+  color: #27A5D9;
+}
+
+/* line 53, ../sass/main.scss */
+.top-layer {
+  z-index: 1500;
+}
+
+/* line 56, ../sass/main.scss */
+html, body {
+  font-family: CiscoSans;
+  font-weight: 100;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #F9FAFA;
+  background-image: url(./../img/backdrop.png);
+  background-position: center;
+  background-size: cover;
+  color: #4A4A4A;
+  overflow: hidden;
+  opacity: 0;
+}
+
+/* line 71, ../sass/main.scss */
+i {
+  display: -webkit-flex;
+  display: flex;
+  /* makes the container fit to icon */
+  display: -ms-flexbox;
+}
+
+/* line 76, ../sass/main.scss */
+panel-container {
+  position: absolute;
+  z-index: 1;
+  /* height: 100%; */
+  white-space: nowrap;
+  /* overflow: hidden; */
+  display: inline-block;
+  left: 50%;
+  top: 50%;
+  /* border: 1px solid black; */
+}
+/* line 86, ../sass/main.scss */
+panel-container .panel {
+  width: 80vw;
+  height: 90vh;
+  /*width: 40vmin;
+  height: 30vmin;*/
+  display: inline-block;
+  flex-basis: 40vmin;
+  border-radius: 5px;
+  /* margin: 30px; */
+  position: relative;
+  vertical-align: middle;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 140, ../sass/main.scss */
+.icon-cisco {
+  position: absolute;
+  right: 5vmin;
+  top: 5vmin;
+  font-size: 5vmin;
+  z-index: 1;
+  color: #666666;
+}
+
+/* line 149, ../sass/main.scss */
+.frame {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 100%;
+  /*top:50%;
+  left: 50%;*/
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 159, ../sass/main.scss */
+.table {
+  position: absolute;
+  width: 100%;
+  bottom: -2.4vw;
+  cursor: pointer;
+}
+
+/* line 166, ../sass/main.scss */
+.notification-bar {
+  display: block;
+  position: absolute;
+  background-color: #EFF0F1;
+  top: 0;
+  width: 100%;
+  height: 12vh;
+  z-index: 0;
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  border-radius: 50%;
+}
+
+/* line 178, ../sass/main.scss */
+.panel.middle .small-text {
+  color: #9B9B9B;
+  font-size: 1.4vh;
+  font-weight: 300;
+}
+/* line 182, ../sass/main.scss */
+.panel.middle .small-text .blue {
+  cursor: pointer;
+}
+/* line 185, ../sass/main.scss */
+.panel.middle .small-text.outer {
+  position: absolute;
+  bottom: 3.4vw;
+  left: 2vw;
+}
+/* line 236, ../sass/main.scss */
+.panel.middle .chats-container {
+  position: absolute;
+  top: 6vh;
+  left: 5vw;
+  text-align: center;
+}
+/* line 241, ../sass/main.scss */
+.panel.middle .chats-container a {
+  display: block;
+}
+/* line 244, ../sass/main.scss */
+.panel.middle .chats-container .icon-container {
+  display: inline-block;
+  position: relative;
+  width: 8vh;
+  height: 8vh;
+  border-radius: 50%;
+  cursor: pointer;
+  -moz-transition: background-color 200ms, color 200ms;
+  -o-transition: background-color 200ms, color 200ms;
+  -webkit-transition: background-color 200ms, color 200ms;
+  transition: background-color 200ms, color 200ms;
+  border: 1px solid #27A5D9;
+  overflow: hidden;
+  color: #27A5D9;
+}
+/* line 256, ../sass/main.scss */
+.panel.middle .chats-container .icon-container:hover {
+  background-color: #27A5D9;
+  color: white;
+}
+/* line 260, ../sass/main.scss */
+.panel.middle .chats-container .icon-container .icon-chats {
+  background-color: transparent;
+  position: absolute;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  display: -webkit-flex;
+  display: flex;
+  display: -ms-flexbox;
+  font-size: 4vh;
+  line-height: 0;
+}
+/* line 279, ../sass/main.scss */
+.panel.middle .chats-container .text {
+  font-size: 1.5vmin;
+  font-weight: 300;
+  margin-top: 1vmin;
+}
+/* line 285, ../sass/main.scss */
+.panel.middle .lobby-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* line 292, ../sass/main.scss */
+.panel.middle .lobby-container .user-container {
+  opacity: 1;
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 50%;
+  display: inline-block;
+  background-image: url(../../Cisco-Assets/personas/Catherine-Sinu.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+/* line 304, ../sass/main.scss */
+.panel.middle .lobby-container .user-container::before {
+  content: '';
+  border: 1px solid #D9DDE0;
+  border-radius: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0.5vmin;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* line 318, ../sass/main.scss */
+.panel.middle .lobby-container .more-options {
+  margin-top: 3vh;
+  font-size: 1.5vh;
+  cursor: pointer;
+  font-weight: 300;
+}
+/* line 324, ../sass/main.scss */
+.panel.middle .lobby-container .more-options i {
+  display: inline-block;
+  font-size: 1.5vh;
+  margin-right: .5vh;
+}
+/* line 330, ../sass/main.scss */
+.panel.middle .lobby-container h1 {
+  color: #0AB0DE;
+  font-size: 5.5vh;
+  margin-bottom: 1vh;
+}
+/* line 335, ../sass/main.scss */
+.panel.middle .lobby-container h5 {
+  font-size: 2vh;
+  margin-top: 0;
+  margin-bottom: 1vh;
+  font-weight: 300;
+}
+/* line 341, ../sass/main.scss */
+.panel.middle .lobby-container .join-button {
+  position: relative;
+  background-color: #4DAD4C;
+  color: white;
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 5vh;
+  padding: 2vh 10vh;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin: 3vh 0 1vh 0;
+}
+/* line 352, ../sass/main.scss */
+.panel.middle .lobby-container .join-button:hover {
+  background-color: #388F38;
+}
+/* line 355, ../sass/main.scss */
+.panel.middle .lobby-container .join-button:active {
+  background-color: #39853C;
+}
+
+/* line 626, ../sass/main.scss */
+.panel.left {
+  padding: 12vh;
+}
+/* line 628, ../sass/main.scss */
+.panel.left .presentation-container {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  padding: 2vmin;
+  text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  display: -ms-flexbox;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 637, ../sass/main.scss */
+.panel.left .presentation-container .container {
+  position: relative;
+  height: 100%;
+  display: inline-block;
+  -webkit-flex: 1 0;
+  flex: 1 0;
+  -ms-flex: 1 0;
+  margin: 0 2vmin;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: white;
+  -moz-box-shadow: 0 0.5vmin 1vmin rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0.5vmin 1vmin rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5vmin 1vmin rgba(0, 0, 0, 0.2);
+}
+/* line 648, ../sass/main.scss */
+.panel.left .presentation-container .container .content {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+/* line 655, ../sass/main.scss */
+.panel.left .presentation-container .container .content.paradise {
+  background-image: url(./../img/beach-bora-bora.jpg);
+}
+/* line 658, ../sass/main.scss */
+.panel.left .presentation-container .container .content.family {
+  background-image: url(./../img/black20family.jpg);
+}
+/* line 661, ../sass/main.scss */
+.panel.left .presentation-container .container .content.pet {
+  background-image: url(./../img/Sparkles-Dog.jpg);
+}
+/* line 664, ../sass/main.scss */
+.panel.left .presentation-container .container .content.sport {
+  background-image: url(./../img/score.jpg);
+}
+/* line 672, ../sass/main.scss */
+.panel.left .presentation-container .container .icon-add {
+  position: absolute;
+  color: white;
+  font-size: 22vmin;
+  left: 50%;
+  top: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* line 685, ../sass/main.scss */
+.panel.right .whiteboard-container {
+  width: 75%;
+  height: 75%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+}
+/* line 693, ../sass/main.scss */
+.panel.right .whiteboard-container i {
+  width: 36px;
+  height: 36px;
+  transition: all 500ms;
+  position: absolute;
+  display: -webkit-flex;
+  display: flex;
+  display: -ms-flexbox;
+  cursor: pointer;
+  top: 8px;
+  right: 50px;
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 7px;
+  border: 1px solid transparent;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 2;
+}
+/* line 710, ../sass/main.scss */
+.panel.right .whiteboard-container i:hover {
+  background-color: #CDCDCD;
+  border: 1px solid #898989;
+}
+/* line 716, ../sass/main.scss */
+.panel.right iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+/* line 722, ../sass/main.scss */
+.panel.right .disable {
+  pointer-events: none;
+}
+
+/* line 727, ../sass/main.scss */
+.spark {
+  position: absolute;
+  top: 0;
+  z-index: 2001;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: none;
+}
+
+/* line 737, ../sass/main.scss */
+.drink-selector {
+  position: absolute;
+  bottom: 2vw;
+  right: 25vw;
+  width: 16vmin;
+  text-align: center;
+}
+/* line 744, ../sass/main.scss */
+.drink-selector img {
+  width: 100%;
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+}
+/* line 753, ../sass/main.scss */
+.drink-selector .shadow {
+  position: absolute;
+  display: inline-block;
+  bottom: -0.1vw;
+  width: 63%;
+  height: 1vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  border-radius: 50%;
+  z-index: 0;
+  right: 7%;
+}
+
+/* line 776, ../sass/main.scss */
+.customization-panel {
+  position: absolute;
+  bottom: -30vmin;
+  left: 50%;
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  z-index: 1501;
+  display: inline-block;
+  border: 1px solid #D9DDE0;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+/* line 786, ../sass/main.scss */
+.customization-panel .option-container {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+/* line 793, ../sass/main.scss */
+.customization-panel .option-container .img-container {
+  position: relative;
+  display: inline-block;
+  height: 10vmin;
+  width: 10vmin;
+  padding: 2vmin;
+  margin: 1vmin;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+/* line 802, ../sass/main.scss */
+.customization-panel .option-container .img-container:hover {
+  border-color: #D9DDE0;
+}
+/* line 805, ../sass/main.scss */
+.customization-panel .option-container .img-container.selected, .customization-panel .option-container .img-container.selected:hover {
+  border-color: #27A5D9;
+}
+/* line 809, ../sass/main.scss */
+.customization-panel .option-container .img-container .option {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+/* line 818, ../sass/main.scss */
+.customization-panel h4 {
+  font-weight: 300;
+  margin: 1vmin 0;
+}
+
+/* line 823, ../sass/main.scss */
+.thin-client-container {
+  width: 0;
+  height: 0;
+  background-color: white;
+  z-index: 1600;
+  position: absolute;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+}
+/* line 835, ../sass/main.scss */
+.thin-client-container .img-container {
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  width: 90%;
+}
+/* line 841, ../sass/main.scss */
+.thin-client-container .img-container img {
+  width: 100%;
+}
+/* line 845, ../sass/main.scss */
+.thin-client-container .img-container .return {
+  display: inline-block;
+  position: absolute;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  bottom: 2.2vw;
+  left: 55.2vw;
+  cursor: pointer;
+}

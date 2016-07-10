@@ -1,0 +1,6 @@
+<div class="option-container">
+	<div class="img-container" ng-class="{selected: option.name == currentTable.name || option.name == currentDrink.name}" ng-repeat="option in currentSelectionSet track by $index" ng-click="selectOption(option)" ng-mouseover="setCustomizationName(option.name)">
+		<div class='option' ng-style="{'background-image':'url('+option.path+')', 'background-size': selectionType == 'table'?'initial' : 'contain', 'background-position': selectionType == 'table'?'bottom':'center'}"></div>
+	</div>
+</div>
+<h4 class="option-text">{{customizationName}}</h4>

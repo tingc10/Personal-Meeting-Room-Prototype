@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<title>Personal Meeting Room</title>
+<link href="./stylesheets/main.css" rel="stylesheet">
+<link href="./Atlantic-Icons/style.css" rel="stylesheet" async>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/utils/Draggable.min.js"></script>
+<script src="./js/rAF-shim.js"></script>
+<!-- PERSONAL JS -->
+<script type="text/javascript" src="./js/panel-directives.js"></script>
+<script type="text/javascript" src="./js/utility-directives.js"></script>
+<script type="text/javascript" src="./js/app.js"></script>
+
+</head>
+<body ng-app="PMR">
+	<i class='icon-cisco'></i>
+	<div class="notification-bar"></div>
+	<div class="frame" frame>
+		<panel-container id="draggable"></panel-container>
+	</div>
+	<div class="customization-panel" customization-panel></div>
+	<img class='table top-layer' src='{{currentTable.path}}'  ng-click="customizeObject('table')">
+	<div class="drink-selector top-layer" drink-selector></div>
+	<div class="thin-client-container" thin-client>
+		<div class="img-container">
+			<img src='./img/thin-client.png'>
+			<div class="return" ng-click='toggleMeeting(false)'></div>
+		</div>
+	</div>
+
+	<!-- <iframe class="spark" src='https://web.ciscospark.com/'></iframe> -->
+	<!-- <i class="icon-cog top-layer"></i> -->
+	<!-- <div class="overlay"></div> -->
+</body>
+</html>

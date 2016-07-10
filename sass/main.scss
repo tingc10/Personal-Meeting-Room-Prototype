@@ -1,0 +1,857 @@
+@import "compass/css3";
+@import "../../Cisco_Fonts/CiscoSans";
+$officeBackground: #F9FAFA;
+$notificationBar: #EFF0F1;
+$blue: #27A5D9;
+$blueText: #0AB0DE;
+$red: #F5483F;
+$orange: #FA631F;
+$green: #4DAD4C;
+$grey: #666666;
+$teal: #14A792;
+$borderColor: #D9DDE0;
+$greyText: #9B9B9B;
+$standardBlack: #4A4A4A;
+$lightBorder: #D9DDE0;
+// $clockSize: 15vmin;
+// @font-face {
+// 	font-family: CiscoSans;
+// 	src: url("../../Cisco_Fonts/CiscoSans OTF/CiscoSansExtraLight.otf");
+// 	font-weight: 100;
+// }
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 100;
+}
+a {
+	outline: 0;
+}
+@mixin center {
+	position:absolute;
+	left: 50%;
+	top: 50%;
+	@include transform(translate(-50%, -50%));
+}
+// .overlay {
+// 	position: absolute;
+// 	width: 102vw;
+// 	height: 100%;
+// 	top: 0;
+// 	left: -1vw;
+// 	pointer-events: none;
+// 	display: block;
+// 	z-index: 1999;
+// 	// background-color: rgba(255,255,255,0.75);
+// 	// @include filter-gradient(#ffffff, #ffffff, horizontal);
+// 	@include background-image(linear-gradient(left, rgba(255,255,255,0.75) 0%, rgba(241,111,92,0) 15%, rgba(255,26,0,0) 85%, rgba(255,255,255,0.75) 100%));
+// 	@include filter(blur(3px));
+// }
+
+.blue {
+	color: $blue;
+}
+.top-layer {
+	z-index: 1500;
+}
+html, body {
+	font-family: CiscoSans;
+	font-weight: 100;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	background-color: $officeBackground;
+	background-image: url(./../img/backdrop.png);
+	background-position: center;
+	background-size: cover;
+	color: $standardBlack;
+	overflow: hidden;
+	opacity: 0;
+
+}
+i {
+	@include display-flex;		/* makes the container fit to icon */
+	display: -ms-flexbox;
+}
+
+panel-container {
+	position: absolute;
+	z-index: 1;
+	/* height: 100%; */
+	white-space: nowrap;
+	/* overflow: hidden; */
+	display: inline-block;
+	left: 50%;
+	top: 50%;
+	 /* border: 1px solid black; */ 
+	.panel {
+		// background-color: rgba(255,255,255,0.75);
+		width: 80vw;
+		height: 90vh;
+		/*width: 40vmin;
+		height: 30vmin;*/
+		display: inline-block;
+		flex-basis: 40vmin;
+		// border: 1px solid rgba(0,0,0,0.1);
+		border-radius: 5px;
+		// @include box-shadow(0 0 3px rgb(239, 0, 255));
+		/* margin: 30px; */
+		position: relative;
+		vertical-align: middle;
+		@include box-sizing(border-box);
+
+	}
+}
+
+// .user-container {
+// 	position: absolute;
+// 	top: 12vmin;
+//   left: 12vmin;
+//   font-size: 2vmin;
+//   z-index: 2000;
+//   pointer-events: none;
+// 	.user-img {
+// 		background-image: url(../../Cisco-Assets/personas/Catherine-Sinu.png);
+// 		background-repeat: no-repeat;
+// 		background-position: center;
+// 		background-size: cover;
+// 		width: 10vmin;
+// 	  height: 10vmin;
+// 	  border-radius: 50%;
+// 	  display: inline-block;
+// 	  vertical-align: middle;
+// 	}
+// 	.meta-container {
+// 		display: inline-block;
+// 		vertical-align: middle;
+// 		padding-left: 1vmin;
+// 		.sub-meta {
+// 			font-size: 1.5vmin;
+// 			.status {
+// 				display: inline-block;
+// 			  background-color: $green;
+// 			  width: 1.5vmin;
+// 			  height: 1.5vmin;
+// 			  border-radius: 50%;
+// 			}
+// 		}
+// 	}
+// }
+
+.icon-cisco {
+	position: absolute;
+  right: 5vmin;
+  top: 5vmin;
+  font-size: 5vmin;
+  z-index: 1;
+	color: $grey;
+}
+
+.frame {
+	/* border: 1px solid black; */
+	width: 100%;
+	height: 100%;
+	/*top:50%;
+	left: 50%;*/
+	position: relative;
+	overflow: hidden;
+}
+
+.table {
+	position: absolute;
+	width: 100%;
+  bottom: -2.4vw;
+  cursor: pointer;
+  // z-index: 2001;
+}
+.notification-bar {
+	display: block;
+	position: absolute;
+	background-color: $notificationBar;
+	top:0;
+	width: 100%;
+	height: 12vh;
+	z-index: 0;
+	@include transform(translate(0,-50%));
+	border-radius: 50%;
+}
+.panel.middle {
+	.small-text {
+		color: $greyText;
+		font-size: 1.4vh;
+		font-weight: 300;
+		.blue {
+			cursor: pointer;
+		}
+		&.outer {
+			position: absolute;
+			bottom: 3.4vw;
+			left: 2vw;
+		}
+	}
+	// .clock-container{
+	// 	position: absolute;
+	// 	right: 2vw;
+	// 	top: 16vh;
+	// 	width: $clockSize+1;
+	// 	height: $clockSize+1;
+	// 	.text {
+	// 	  display: inline-block;
+	// 	  font-size: 1.5vmin;
+	// 	  position: absolute;
+	//     width: 100%;
+ //  		bottom: -3vmin;
+ //  		text-align: center;
+ //  		color: $blue;
+	// 	}
+	// 	.clock {
+	// 		width: $clockSize;
+	// 		height: $clockSize;
+	// 		position: absolute;
+	// 		border: 1px solid $greyText;
+	// 		border-radius: 50%;
+	// 		display: inline-block;
+	// 		cursor: default;
+	// 		.hand {
+	// 			position: absolute;
+	// 			/* border: 1px solid black; */
+	// 			width: $clockSize/10;
+	// 			border-radius: $clockSize/5;
+	// 			// @include transform(translate(-50%,-$clockSize/20)); 
+	// 			left: 50%;
+	// 			top: 50%;
+	// 			&.minute {
+	// 				height: $clockSize*(45/100);
+	// 				background-color: #049FD9;
+	// 				opacity: 0.9;
+	// 			}
+	// 			&.hour {
+	// 				height: $clockSize*(30/100);
+	// 				background-color: #049FD9;
+	// 				opacity: 0.6;
+	// 			}
+				
+	// 		}
+	// 	}
+	// }
+	.chats-container {
+		position: absolute;
+		top: 6vh;
+		left: 5vw;
+		text-align: center;
+		a {
+			display: block;
+		}
+		.icon-container {
+			display: inline-block;
+			// overflow: hidden;
+			position: relative;
+			width: 8vh;
+			height: 8vh;
+			border-radius: 50%;
+			cursor: pointer;
+			@include transition(background-color 200ms, color 200ms);
+			border: 1px solid #27A5D9;
+			overflow: hidden;
+		  color: #27A5D9;
+		  &:hover {
+		  	background-color: #27A5D9;
+		  	color: white;
+		  }
+			.icon-chats {
+			  background-color: transparent;
+			  // display: block;
+			  position: absolute;
+			  @include transform(translate(-50%,-50%));
+			  left: 50%;
+			  top: 50%;
+			  @include display-flex;
+			  // @include box-sizing(border-box);
+			  display: -ms-flexbox;
+			  // -ms-flex-align: center;
+			  // padding: 2vh;
+			  font-size: 4vh;
+			  line-height: 0;
+			  // @include center;
+			  
+			}
+
+		}
+		.text {
+		  font-size: 1.5vmin;
+		  font-weight: 300;
+		  margin-top: 1vmin;
+		}
+	}
+	.lobby-container {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		@include transform(translate(-50%, -50%));
+		text-align: center;
+
+		.user-container {
+			opacity: 1;
+			width: 20vmin;
+		  height: 20vmin;
+		  // border: 1px solid black;
+		  border-radius: 50%;
+		  display: inline-block;
+		  background-image: url(../../Cisco-Assets/personas/Catherine-Sinu.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			position: relative;
+			&::before {
+			  content: '';
+			  border: 1px solid $lightBorder;
+		  	border-radius: 50%;
+			  position: absolute;
+			  width: 100%;
+			  height: 100%;
+			  padding: 0.5vmin;
+			  top: 50%;
+			  left: 50%;
+			  @include transform(translate(-50%,-50%));
+			}
+			
+		}
+		.more-options {
+		  margin-top: 3vh;
+  		font-size: 1.5vh;
+  		cursor: pointer;
+  		font-weight: 300;
+
+  		i {
+			  display: inline-block;
+			  font-size: 1.5vh;
+			  margin-right: .5vh;
+  		}
+		}
+		h1 {
+			color: $blueText;
+			font-size: 5.5vh;
+			margin-bottom: 1vh;
+		}
+		h5 {
+			font-size: 2vh;
+			margin-top: 0;
+			margin-bottom: 1vh;
+			font-weight: 300;
+		}
+		.join-button {
+			position: relative;
+	  	background-color: $green;
+	  	color: white;
+	  	display: inline-block;
+	  	@include box-sizing(border-box);
+      font-size: 5vh;
+  		padding: 2vh 10vh;
+		  border: 1px solid rgba(0, 0, 0, 0.2);
+		  cursor: pointer;
+		  margin: 3vh 0 1vh 0;
+		  &:hover {
+		  	background-color:#388F38;
+		  }
+		  &:active {
+		  	background-color: #39853C;
+		  }
+		}
+
+		// .participant-container {
+		// 	.title {
+		// 	  font-size: 1.5vmin;
+		// 	  text-transform: uppercase;
+		// 	  border-bottom: 1px dotted black;
+		// 	  color: $blueText;
+		//     margin: 1vh 0;
+		// 	}
+		// 	.participant {
+		// 		background-size: cover;
+		// 		background-position: center;
+		// 		background-repeat: no-repeat;
+		// 	  border: 1px solid $lightBorder;
+		// 	  width: 5vmin;
+		// 	  height: 5vmin;
+		// 	  border-radius: 50%;
+		// 	  display: inline-block;
+		// 	  margin-right: 0.6vw;
+		// 		&.a {
+		// 			background-image: url(./../../Cisco-Assets/personas/Marissa-Reena.png);	
+		// 		}
+		// 		&.b {
+		// 			background-image: url(./../../Cisco-Assets/personas/Adrian-Delamico.png);	
+		// 		}
+		// 		&.c {
+		// 			background-image: url(./../../Cisco-Assets/personas/Maria-Rossi.png);	
+		// 		}
+		// 		&.d {
+		// 			background-image: url(./../../Cisco-Assets/personas/David-Liam.png);	
+		// 		}
+		// 		&.e {
+		// 			background-image: url(./../../Cisco-Assets/personas/Elizabeth-Wu.png);
+		// 		}
+		// 		&.f {
+		// 			background-image: url(./../../Cisco-Assets/personas/Sherry-McKenna.png);
+		// 		}
+		// 		&.inactive {
+		// 			opacity: 0.6;
+		// 		}
+
+		// 	}
+		// }
+		
+	
+	}
+
+// 	.main-button-container {
+// 		display: inline-block;
+// 		position: absolute;
+// 		left: 50%;
+// 		top: 10vmin;
+// 		@include transform(translate(-50%, 0));
+// 		.main-button {
+// 		  display: inline-block;
+// 		  color: white;
+// 		  border-radius: 50%;
+// 		  width: 12vmin;
+// 		  height: 12vmin;
+// 		  position: relative;
+// 		  margin: 0 2vmin;
+// 		  font-size: 4vmin;
+// 		  cursor: pointer;
+// 			i {
+// 				position: absolute;
+// 				@include transform(translate(-50%,-50%));
+// 				left: 50%;
+// 				top: 50%;
+// 				@include display-flex;
+// 			}  
+// 			&.blue {
+// 				background-color: $blue;
+// 			}
+// 			&.orange {
+// 				background-color: $orange;
+// 			}
+// 			&.green {
+// 				background-color: $green;
+// 			}
+// 			&.teal {
+// 				background-color: $teal;
+// 			}
+// 			.tag {
+// 				position: absolute;
+// 				@include transform(translate(-50%, 0));
+// 				bottom: -4vmin;
+// 				left: 50%;
+// 				color: $grey;
+// 				text-transform: uppercase;
+// 				font-size: 2vmin;
+// 			}
+// 		}
+// 	}
+// 	.notification-container {
+// 	  @include transform(translate(-50%,0));
+// 	  position: absolute;
+// 	  @include display-flex;
+// 	  flex-direction: column;
+// 	  left: 50%;
+// 	  bottom: 0;
+// 	  background-color: white;
+// 	  width: 50vw;
+// 	  border: 1px solid $borderColor;
+// 	  max-height: 62vh;
+// 	  cursor: default;
+// 	  .main-notification-container{
+// 	  	border-bottom: 1px solid $borderColor;
+// 	  	flex: 1 0 10vw;
+// 		  .scheduled {
+// 		  	width: 75%;
+// 		  	position: relative;
+// 		  	.time {
+// 	  			width: 11vw;
+// 					text-align: right;
+// 					font-size: 1vw;
+// 	  		}
+// 	  		.title {
+// 	  			font-size: 1vw;
+// 	  		}
+// 	  		div {
+// 		  		display: inline-block;
+		  		
+// 		  	}
+// 		  	.meta-container, &.next .title {
+// 		  		margin-left: 1vw;
+// 		  	}
+// 		  	&.upcoming {
+
+// 		  		.time {
+// 			  		font-size: 3vw;
+// 					  padding: 2vw 0 1.2vw 0;
+// 					  display: inline-block;
+// 					  position: relative;
+// 					}
+// 					.title {
+// 						font-size: 1.2vw;
+// 					}
+// 					.meta-container div {
+// 						display: block;
+// 						vertical-align: middle;
+// 						.participant {
+// 							background-size: cover;
+// 							background-position: center;
+// 							background-repeat: no-repeat;
+// 						  border: 1px solid #979797;
+// 						  width: 3vmin;
+// 						  height: 3vmin;
+// 						  border-radius: 50%;
+// 						  display: inline-block;
+// 						  margin-right: 0.6vw;
+// 							&.a {
+// 								background-image: url(./../../Cisco-Assets/personas/Marissa-Reena.png);	
+// 							}
+// 							&.b {
+// 								background-image: url(./../../Cisco-Assets/personas/Adrian-Delamico.png);	
+// 							}
+// 							&.c {
+// 								background-image: url(./../../Cisco-Assets/personas/Maria-Rossi.png);	
+// 							}
+// 							&.d {
+// 								background-image: url(./../../Cisco-Assets/personas/David-Liam.png);	
+// 							}
+// 							&.e {
+// 								background-image: url(./../../Cisco-Assets/personas/Elizabeth-Wu.png);
+// 							}
+// 							&.f {
+// 								background-image: url(./../../Cisco-Assets/personas/Sherry-McKenna.png);
+// 							}
+// 							&.inactive {
+// 								opacity: 0.6;
+// 							}
+
+// 						}
+// 					}
+
+// 		  	}
+
+		  	
+// 		  }
+// 		  .join-button {
+// 		  	position:absolute;
+// 		  	background-color: $green;
+// 		  	color: white;
+// 		  	display: inline-block;
+// 		  	@include box-sizing(border-box);
+// 	  	  top: 0;
+//   			right: 2vw;
+//   			font-size: 2vw;
+//   			margin-top:2vw;
+// 			  padding: 0.5vw 3vw;
+// 			  border: 1px solid rgba(0,0,0,0.2);
+// 			  cursor: pointer
+// 			}
+// 		}
+// 		.misc-notification-container {
+// 			overflow-y: auto;
+// 			.category-container {
+// 				position: relative;
+// 				.header {
+// 					padding-left: 3vw;
+// 					padding-bottom: 0.3vw;
+//   				padding-top: 1vw;
+//   				border-bottom: 1px solid $lightBorder;
+//   				position: relative;
+//   				.icon.call {
+//   					border-radius: 50%;
+// 					  width: 1.5vw;
+// 					  height: 1.5vw;
+// 					  background-color: $green;
+// 					  position:relative;
+// 					  i {
+// 					  	position: absolute;
+// 					  	font-size: 0.75vw;
+// 					  	color: white;
+// 					  	@include transform(translate(-50%, -50%));
+// 					  	left:50%;
+// 					  	top: 50%;
+// 					  }
+// 					}
+  				
+// 					.icon, .title {
+// 						display: inline-block;
+// 						vertical-align: middle;
+// 					}
+// 					.icon-chats {
+// 						color: $blue;
+// 					}
+// 					i {
+// 						font-size: 1.5vw;
+// 					}
+// 					.title {
+// 						font-size: 1.2vw;
+// 					}
+// 				}
+// 				.notification {
+// 					position: relative;
+// 					margin: 1vw 0;
+// 					&.red {
+// 						color: $red;
+// 					}
+// 					.main, .time {
+// 						display: inline-block;
+// 					}
+// 					.main {
+// 						margin-left: 5vw;
+// 					}
+// 					.time {
+// 					  vertical-align: top;
+// 					  font-size: 0.8vw;
+// 					  position: absolute;
+// 					  top: 0;
+//   					right: 5vw;
+// 					}
+// 					.main .title{
+// 						font-size: 1vw;
+// 						color: $greyText;
+// 					}
+// 					.user {
+//   					font-size: 1vw;
+//   					color: $greyText;
+//   				}
+// 				}
+// 			}
+// 		}
+// 	}
+}
+
+.panel.left {
+	padding: 12vh;
+	.presentation-container {
+		position: relative;
+	  width: 100%;
+	  height: 50%;
+	  padding: 2vmin;
+	  text-align: center;
+	  @include display-flex;
+	  display: -ms-flexbox;
+	  @include box-sizing(border-box);
+	  .container {
+	  	position: relative;
+		  height: 100%;
+		  display: inline-block;
+		  // padding: 2vmin;
+		  @include flex(1 0);
+		  -ms-flex: 1 0;
+  		margin: 0 2vmin;
+	  	@include box-sizing(border-box);
+	  	background-color: white;
+	  	@include box-shadow(0 0.5vmin 1vmin rgba(0, 0, 0, .2));
+		  .content {
+		  	height: 100%;
+	  	  width: 100%;
+			  background-size: cover;
+			  background-position: center;
+			  background-repeat: no-repeat;
+			  display: inline-block;
+		  	&.paradise {
+		  		background-image: url(./../img/beach-bora-bora.jpg);
+		  	}
+		  	&.family {
+		  		background-image: url(./../img/black20family.jpg);
+		  	}
+		  	&.pet {
+		  		background-image: url(./../img/Sparkles-Dog.jpg);
+		  	}
+		  	&.sport {
+		  		background-image: url(./../img/score.jpg);
+
+		  	}
+		  }
+		  // &.add {
+		  // 	background-color: #DFE4E7;
+		  // }
+		  .icon-add {
+	  	  position: absolute;
+			  color: white;
+			  font-size: 22vmin;
+			  left: 50%;
+			  top: 50%;
+			  @include transform(translate(-50%, -50%));
+		  }
+		}
+	}
+}
+
+.panel.right {
+	.whiteboard-container {
+	  width: 75%;
+	  height: 75%;
+	  
+	  // @include transform(translate(-50%, -50%));
+	  left: 50%;
+	  top: 50%;
+	  position: absolute;
+	  i {
+	  	width: 36px;
+	  	height: 36px;
+	  	transition: all 500ms;
+	  	position: absolute;
+		  @include display-flex;
+		  display: -ms-flexbox;
+		  cursor: pointer;
+		  top: 8px;
+		  right: 50px;
+		  font-size: 20px;
+		  border-radius: 50%;
+	    padding: 7px;
+  		border: 1px solid transparent;
+		  @include box-sizing(border-box);
+		  @include transform(translateZ(0));
+		  z-index: 2;
+	  	&:hover {
+	  		background-color: #CDCDCD;
+	  		border: 1px solid #898989;
+	  	}
+	  }
+	}
+	iframe {
+		border: none;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	.disable {
+  	pointer-events: none;
+  }
+}
+
+.spark {
+	position: absolute;
+  top: 0;
+  z-index: 2001;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: none;
+}
+
+.drink-selector {
+  position: absolute;
+  bottom: 2vw;
+  // width: 16vmin;
+  right: 25vw;
+  width: 16vmin;
+  text-align: center;
+  img {
+  	width: 100%;
+  	cursor: pointer;
+  	position: absolute;
+  	display: block;
+  	z-index: 1;
+  	bottom: 0;
+  	left: 0;
+  }
+  .shadow {
+	  position: absolute;
+	  display: inline-block;
+	  bottom: -0.1vw;
+	  width: 63%;
+	  height: 1vw;
+	  background-color: rgba(0, 0, 0, 0.4);
+	  @include filter(blur(3px));
+	  border-radius: 50%;
+	  z-index: 0;
+	  right: 7%;
+  }
+}
+
+// .icon-cog {
+//   position: absolute;
+//   bottom: 2vw;
+//   font-size: 4vmin;
+//   color: white;
+//   left: 10vw;
+//   cursor: pointer;
+// }
+
+.customization-panel {
+	position: absolute;
+  bottom: -30vmin;
+  left: 50%;
+  @include transform(translate(-50%, 0));
+  z-index: 1501;
+  display: inline-block;
+  border: 1px solid $borderColor;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  .option-container {
+	 	position: relative;
+	  display: inline-block;
+	  // align-items: center;
+	  // height: 25vh;
+	  // width: 40vw;
+	  white-space: nowrap;
+  	.img-container {
+		  position: relative;
+		  display: inline-block;
+		  height: 10vmin;
+		  width: 10vmin;
+		  padding: 2vmin;
+		  margin: 1vmin;
+		  border: 1px solid transparent;
+		  cursor: pointer;
+		  &:hover {
+		  	border-color: $lightBorder;
+		  }
+		  &.selected, &.selected:hover {
+		  	border-color: $blue;
+		  }
+		  
+  		.option {
+	  		background-size: contain;
+	  		background-position: center;
+	  		background-repeat: no-repeat;
+	  		height: 100%;
+	  	}
+  	}
+  	
+  }
+  h4 {
+  	font-weight: 300;
+  	margin: 1vmin 0;
+  }
+}
+.thin-client-container {
+	width: 0;
+	height: 0;
+	background-color: white;
+	z-index: 1600;
+	position: absolute;
+	
+	// @include box-sizing(border-box);
+	@include transform(translate(-50%, -50%));
+	left: 50%;
+	top: 50%;
+	overflow: hidden;
+	.img-container {
+		@include transform(translate(-50%, -50%));
+		left: 50%;
+		top: 50%;
+		position: absolute;
+		width: 90%;
+		img {
+			width: 100%;
+			
+		}
+		.return {
+		  display: inline-block;
+		  position: absolute;
+		  width: 4vw;
+		  height: 4vw;
+		  border-radius: 50%;
+		  bottom: 2.2vw;
+		  left: 55.2vw;
+		  cursor: pointer;
+		}
+	}
+	
+}
